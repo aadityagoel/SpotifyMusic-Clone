@@ -2,6 +2,7 @@ body{
     width: 100%;
     height: 100%;
     margin: 0px;
+    background-color: #121212;
     font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,Helvetica,Arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
 }
 
@@ -36,76 +37,76 @@ body{
 }
 /* logo ends */
 
-/* list1 start */
-.list1 ul{
+/* menu1 start */
+.menu1 ul{
     padding: 0px;
     list-style: none;
     margin: 40px 0px;
 }
-.list1 ul li{
+.menu1 ul li{
     height: 35px;
     margin: 0 8px;
     padding: 0 8px;
     box-sizing: border-box;
     border-radius: 4px; 
 }
-.list1 a{
+.menu1 a{
     text-decoration: none;
     color: #b3b3b3;
     /* font-size: 20px; */
     border-radius: 4px;
     padding: 0 16px;
 }
-.list1 a:hover{
+.menu1 a:hover{
     color: #fff;
 }
-.list1 i{
+.menu1 i{
     margin-right: 16px;
     font-size: 20px;
 }
-.list1 span{
+.menu1 span{
     font-size: 16px;
     font-weight: 700;
     line-height: 1.6;
     letter-spacing: normal;
     text-transform: capitalize;
 }
-/* list1 ends */
+/* menu1 ends */
 
-/* list2 start */
-.list2 h3{
+/* menu2 start */
+.menu2 h3{
     color: #b3b3b3;
     font-size: 13px;
     padding: 0 16px;
     margin-bottom: 0px;
     text-transform: uppercase;
 }
-.list2 ul{
+.menu2 ul{
     padding: 0px;
     list-style: none;
     margin: 10px 0px;
 }
-.list2 ul li{
+.menu2 ul li{
     height: 35px;
     margin: 0 8px;
     padding: 0 8px;
     box-sizing: border-box;
     border-radius: 4px; 
 }
-.list2 a{
+.menu2 a{
     text-decoration: none;
     color: #b3b3b3;
     /* font-size: 16px; */
     border-radius: 4px;
     padding: 0 16px;
 }
-.list2 a:hover{
+.menu2 a:hover{
     color: #fff;
 }
-.list2 i{
+.menu2 i{
     font-size: 16px;
 }
-.list2 span{
+.menu2 span{
     font-size: 16px;
     font-weight: 700;
     line-height: 1.6;
@@ -113,15 +114,15 @@ body{
     text-transform: capitalize;
     margin-left: 16px;
 }
-.list2 .playlist-icon1{
+.menu2 .playlist-icon1{
     background-color: #b3b3b3;
     margin: 0;
     padding: 4px;
 }
-.list2 .playlist-icon1 i{
+.menu2 .playlist-icon1 i{
     color: #010101;
 }
-.list2 .playlist-icon2{
+.menu2 .playlist-icon2{
     background-image: linear-gradient(135deg,#450af5,#c4efd9);
     margin: 0;
     padding: 4px;
@@ -139,6 +140,7 @@ hr{
     padding: 16px 32px;
     width: auto;
     /* position: relative; */
+    z-index: 4;
 }
 .nxt-pre{
     float: left;
@@ -172,4 +174,89 @@ hr{
     border-radius: 500px;
     background-color: #ffffff;
     color: #181818;
+}
+
+.main{
+    position: absolute;
+    width: 1291px;
+    height: 100%;
+    left: 228px;
+    top: 65px;
+
+    /* background: #121212; */
+}
+
+.sub-main{
+    display: grid;
+    grid-gap: 32px;
+    padding: 16px 32px;
+    color: #ffffff;
+}
+.list{
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fill,minmax(164px,1fr));
+}
+
+.cards-heading{
+    /* grid-column: 1/-1; */
+    /* color: #ffffff;
+    text-decoration: none;
+    font-size: 20px; */
+    align-items: center;
+    display: flow-root;
+    margin-bottom: 16px;
+}
+.cards-heading .heading a{
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 28px;
+    /* display: inline-block; */
+    float: left;
+    text-transform: capitalize;
+}
+.cards-heading .see-all-link a{
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #b3b3b3;
+    line-height: 16px;
+    text-transform: uppercase;
+    /* display: inline-block; */
+    float: right; 
+}
+.all-card{
+    /* display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fill,minmax(164px,1fr)); */
+    position: relative;
+    width: 100%;
+    
+}
+.single-card{
+    padding: 20px 20px 16px;
+    background: #282828;
+    border-radius: 8px;
+    /* width: 100%; */
+    height: 230px;
+}
+.single-card img{
+    width: 100%;
+    margin-bottom: 16px;
+}
+.single-card .title a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+.single-card p{
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 4px;
 }
